@@ -37,7 +37,8 @@
 #ifdef HAVE_UTEMPTER
 #include <utempter.h>
 #endif
-
+#define DEAD_PROCESS 8 // by dove
+//#include <utmp.h> // by dove
 
 extern struct display *display;
 #ifdef CAREFULUTMP

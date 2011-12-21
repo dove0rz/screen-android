@@ -25,7 +25,7 @@
  */
 
 
-
+//#define DEBUG // by dove
 
 
 /**********************************************************************
@@ -413,7 +413,7 @@
  * If your system has getutent(), pututline(), etc. to write to the
  * utmp file, define GETUTENT.
  */
-#define GETUTENT 1
+//#define GETUTENT 1 // by dove
 
 /*
  * Define UTHOST if the utmp file has a host field.
@@ -531,7 +531,7 @@
 /*
  * If setenv() takes 3 arguments define HAVE_SETENV_3
  */
-#define HAVE_SETENV_3 1
+#define HAVE_SETENV_3 1 
 
 /*
  * If setenv() takes 2 arguments define HAVE_SETENV_2
