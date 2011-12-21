@@ -181,9 +181,9 @@ struct action *ktabp;
   mkey = 0;
   for (key = 0; key < 256 + KMAP_KEYS; key++)
     {
-      n = ktabp[key].nr;
       if (n == RC_ILLEGAL)
 	continue;
+      n = ktabp[key].nr;
       if (ktabp[key].args == noargs)
 	{
 	  used[n] += (key <= ' ' || key == 0x7f) ? 3 :
@@ -201,7 +201,7 @@ struct action *ktabp;
 	if (used[n] > mkey)
 	  mkey = used[n];
 	helpdata->nact[i++] = n;
-      }
+      } 
   debug1("help: %d commands bound to keys with no arguments\n", i);
   debug2("mcom: %d  mkey: %d\n", mcom, mkey);
   helpdata->num_names = i;

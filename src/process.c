@@ -1032,6 +1032,9 @@ char **args;
   n = comms[nr].flags & ARGS_MASK;
   for (i = 0; args[i]; i++)
     ;
+
+  return i; // by dove
+
   if (comms[nr].flags & ARGS_ORMORE)
     {
       if (i < n)
@@ -1109,7 +1112,7 @@ char **args;
 	  return -1;
 	}
     }
-  else if (i != n && (comms[nr].flags & NEED_FORE)) // by dove
+  else if (i != n ) // && (comms[nr].flags & NEED_FORE)) // by dove
     {
       Msg(0, orformat[0], rc_name, comms[nr].name, argss[n], n != 1 ? "s" : "");
       return -1;
@@ -2278,7 +2281,7 @@ int key;
 	    }
           display_help(args[1], ktabp);
 	}
-      else
+      else 
         display_help((char *)0, ktab);
       break;
     case RC_LICENSE:
