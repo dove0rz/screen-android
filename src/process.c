@@ -1033,7 +1033,7 @@ char **args;
   for (i = 0; args[i]; i++)
     ;
 
-  return i; // by dove
+  // return i // by dove
 
   if (comms[nr].flags & ARGS_ORMORE)
     {
